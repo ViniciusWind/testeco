@@ -1,0 +1,687 @@
+:root {
+    --cor_texto_preto: #303030;
+    --cor_texto_branca: #fbfafc;
+    --cor_primaria: #1b3fff;
+    --cor_fundo_cinza: #e5e5e59d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.oculto {
+    display: none !important;
+}
+
+#aviso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 50px 10px 15px 10px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: 1.5s;
+    opacity: 1;
+    z-index: 5;
+}
+
+#aviso.active {
+    display: flex;
+}
+
+#aviso.blur {
+    display: flex;
+    opacity: 0;
+}
+
+#aviso .box {
+    background-color: var(--cor_primaria);
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+#aviso .box p {
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.ctn_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    position: relative;
+}
+
+.ctn_btn.left {
+    justify-content: flex-start;
+}
+
+.ctn_btn .btn {
+    background-color: var(--cor_primaria);
+    padding: 16px 25px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ctn_btn .btn:hover {
+    border-radius: 5px;
+}
+
+.ctn_btn .btn p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.ctn_btn .btn svg {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.ctn_btn .mask_btn {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+}
+
+header {
+    width: 100vw;
+    padding: 20px 30px;
+    display: none;
+}
+
+header img.logo {
+    width: 20%;
+    max-width: 70px;
+}
+
+#ctn_mobile {
+    width: 100vw;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+section {
+    padding: 15px 15px;
+}
+
+sec1 {
+    padding: 30px 15px 20px 15px;
+}
+
+.sec1 img.logo {
+    margin: 30px auto 0 auto
+}
+
+.sec1 h1.title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 15px;
+    color: var(--cor_texto_preto);
+}
+
+.sec1 h3.subtitle {
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--cor_texto_preto);
+}
+
+.sec1 img.banner {
+    width: 90%;
+    margin: 30px auto 0 auto;
+    max-width: 350px;
+}
+
+.sec1 .ctn_box {
+    padding-top: 20px;
+}
+
+.sec1 .ctn_box .box {
+    width: 100%;
+    background-color: var(--cor_fundo_cinza);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.sec1 .ctn_box img {
+    margin: 0 auto;
+    width: 50px;
+}
+
+.sec1 .ctn_box h5 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 15px;
+    color: var(--cor_texto_preto);
+}
+
+.sec1 .ctn_box p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 15px;
+    color: var(--cor_texto_preto);
+}
+
+.sec2 h2.title {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--cor_texto_preto);
+}
+
+.sec2 .iphone {
+    margin-top: 20px;
+}
+
+.sec2 .iphone .fundo_foto {
+    background-color: var(--cor_fundo_cinza);
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sec2 .iphone img.foto {
+    padding: 15px 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.sec2 .iphone img.foto.menor {
+    width: calc(100% - 28px);
+}
+
+.sec2 .iphone img.foto.blur {
+    filter: blur(0);
+    opacity: 0;
+    animation: blurFade 0.5s forwards;
+}
+
+@keyframes blurFade {
+    0% {
+        filter: blur(0);
+        opacity: 1;
+    }
+
+    40% {
+        filter: blur(5px);
+        opacity: 0;
+    }
+
+    60% {
+        filter: blur(5px);
+        opacity: 0;
+    }
+
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.sec2 .iphone h4.modelo {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.sec2 .iphone h4.modelo span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sec2 .iphone ul {
+    margin-top: 20px;
+}
+
+.sec2 .iphone ul li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 5px;
+}
+
+.sec2 .iphone ul li:last-child {
+    border-bottom: none;
+}
+
+.sec2 .iphone ul li svg {
+    fill: var(--cor_texto_preto);
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.sec2 .iphone ul li p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--cor_texto_preto);
+}
+
+.sec2 .iphone h5.cor {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: var(--cor_texto_preto);
+}
+
+.sec2 .iphone h5.cor span {
+    font-weight: 700;
+}
+
+.sec2 .iphone p.cor {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--cor_texto_preto);
+}
+
+.sec2 .iphone .box_select_cores {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sec2 .iphone .box_select_cores .select_cor {
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.sec2 .iphone .box_select_cores .select_cor.active {
+    border: 4px solid var(--cor_primaria);
+}
+
+.sec2 .iphone .box_select_cores .select_cor.esgotado {
+    border: 2px solid red;
+    cursor: not-allowed;
+}
+
+.sec2 .iphone .box_select_cores .select_cor.esgotado::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    display: block;
+    margin-top: 20px;
+    transform: rotate(45deg);
+}
+
+.select_cor.preto {
+    background-color: #31312f;
+}
+
+.select_cor.branco {
+    background: linear-gradient(180deg, rgba(233, 233, 231, 1) 0%, rgba(242, 241, 239, 1) 100%);
+}
+
+.select_cor.azul {
+    background-color: #455177;
+}
+
+.select_cor.natural {
+    background-color: #847f79;
+}
+
+.select_cor.deserto {
+    background-color: #ecdbc9;
+}
+
+.sec2 .iphone p.selecionado {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: var(--cor_texto_preto);
+}
+
+.sec2 .iphone p.selecionado b {
+    font-weight: 700;
+}
+
+.sec2 .iphone .box_vezes {
+    padding-top: 10px;
+}
+
+.sec2 .iphone .box_vezes h5.title_vezes {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--cor_texto_preto);
+}
+
+.sec2 .iphone .box_vezes .line {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.sec2 .iphone .box_vezes .line .radio_select_cor {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.sec2 .iphone .box_vezes .line label {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--cor_texto_preto);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sec2 .iphone .valor {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-top: 20px;
+}
+
+.sec2 .iphone .ctn_valor.vezes_1 .opc_vezes_1 {
+    display: flex;
+}
+
+.sec2 .iphone .ctn_valor.vezes_1 .opc_vezes_2 {
+    display: none;
+}
+
+.sec2 .iphone .ctn_valor.vezes_2 .opc_vezes_1 {
+    display: none;
+}
+
+.sec2 .iphone .ctn_valor.vezes_2 .opc_vezes_2 {
+    display: flex;
+}
+
+.sec2 .iphone .valor p.vezes {
+    font-size: 18px;
+    margin-right: 5px;
+    color: var(--cor_texto_preto);
+}
+
+.sec2 .iphone .valor h3 {
+    font-size: 35px;
+    font-weight: 600;
+    color: var(--cor_texto_preto);
+}
+
+.sec2 .iphone .valor p.mes {
+    font-size: 18px;
+    margin-left: 5px;
+    color: var(--cor_texto_preto);
+}
+
+.sec2 .iphone p.total {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: var(--cor_texto_preto);
+    margin-bottom: 20px;
+}
+
+.sec2 .iphone p.total b {
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--cor_texto_preto);
+}
+
+.sec2 .iphone p.list {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: var(--cor_texto_preto);
+}
+
+.sec3 {
+    padding: 0 0 0 0;
+    background-color: #141414;
+}
+
+.sec3 img.banner {
+    width: 100%;
+}
+
+.sec3 .ctn {
+    padding: 15px;
+}
+
+.sec3 h3.title {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--cor_texto_branca);
+    margin-bottom: 10px;
+}
+
+.sec3 p.subtitle {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--cor_texto_branca);
+}
+
+.sec3 h3.title.caixa {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.sec3 img.caixa {
+    width: 80%;
+    max-width: 300px;
+    margin: 15px auto 0 auto;
+    margin-bottom: 20px;
+}
+
+.sec4 {
+    background-color: #141414;
+    padding-top: 50px;
+}
+
+.sec4 h3.title {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--cor_texto_branca);
+    margin-bottom: 10px;
+}
+
+.sec4 .splide {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.sec4 .splide img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.sec4 .video_yt {
+    margin-top: 20px;
+}
+
+.sec4 .video_yt iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.sec5 {
+    background-color: #141414;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.sec5 h3.title {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--cor_texto_branca);
+    margin-bottom: 10px;
+}
+
+.sec5 .splide {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sec5 .splide img {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.sec6 h3.title {
+    font-size: 22px;
+    margin: 15px 0px 30px 0px;
+    color: var(--cor_texto_preto);
+}
+
+.sec6 .duvidas .box {
+    border-bottom: 1px solid #cccccc;
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+
+.sec6 .duvidas .box:last-child {
+    border-bottom: none;
+}
+
+.sec6 .duvidas .pergunta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sec6 .duvidas .pergunta p {
+    width: calc(100% - 40px);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--cor_texto_preto);
+}
+
+.sec6 .duvidas .pergunta svg {
+    fill: var(--cor_primaria);
+    width: 50px;
+    height: 50px;
+    transition: 0.3s;
+}
+
+.sec6 .duvidas .box.active .pergunta svg {
+    transform: rotate(180deg);
+}
+
+.sec6 .duvidas .resposta {
+    display: none;
+}
+
+.sec6 .duvidas .box.active .resposta {
+    display: block;
+    padding-top: 10px;
+}
+
+.sec6 .duvidas .resposta p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--cor_texto_preto);
+}
+
+.sec6 .duvidas .resposta h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: var(--cor_texto_preto);
+    margin-bottom: 0px;
+}
+
+.sec6 .duvidas .resposta p.list {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+footer {
+    background-color: #141414;
+    padding: 15px;
+}
+
+footer img.logo {
+    margin: 0 auto;
+}
+
+footer p.text {
+    color: var(--cor_texto_branca);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+footer .social {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+}
+
+footer .social img {
+    width: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+footer h5.certificados {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--cor_texto_branca);
+    margin-top: 30px;
+}
+
+footer img.certificado {
+    width: 150px;
+    margin: 10px auto 0 auto;
+}
+
+footer p.bottom {
+    border-top: 1px solid #cccccc;
+    margin-top: 30px;
+    color: var(--cor_texto_branca);
+    padding: 10px 0 20px 0;
+    font-size: 16px;
+}
